@@ -209,6 +209,23 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
 #wa-modal .go{width:100%;justify-content:center}
 #wa-modal .note{text-align:center;font-size:11.5px;color:#7e8db0;margin-top:12px}
 
+/* GALERÍA */
+.gal{columns:3;column-gap:14px}
+@media(max-width:860px){.gal{columns:2}}
+@media(max-width:520px){.gal{columns:1}}
+.gal figure{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;border:1px solid rgba(199,164,93,.16)}
+.gal img{width:100%;display:block;transition:transform .5s,filter .3s;filter:saturate(1.02)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:13px;font-weight:600;color:#fff;background:linear-gradient(0deg,rgba(7,13,26,.85),transparent);opacity:0;transition:opacity .3s}
+.gal figure:hover figcaption{opacity:1}
+#lb{position:fixed;inset:0;z-index:99998;display:none;align-items:center;justify-content:center;background:rgba(5,10,20,.94);padding:20px}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:88vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#lb .lbx{position:absolute;top:18px;right:24px;color:#fff;font-size:34px;cursor:pointer;background:none;border:none;line-height:1}
+#lb .lbn{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:40px;cursor:pointer;background:rgba(255,255,255,.08);border:none;width:54px;height:54px;border-radius:50%}
+#lb .lbp{left:18px}#lb .lbnx{right:18px}
+@media(max-width:600px){#lb .lbn{width:42px;height:42px;font-size:28px}}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.vis{opacity:1;transform:none}
@@ -236,7 +253,7 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
       <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
     </div>
     <div class="hero-foot">
-      <div><b>Desde US$570K</b><span>Entrada por etapas</span></div>
+      <div><b>Desde US$610K</b><span>Entrada por etapas</span></div>
       <div><b>0%</b><span>Impuesto estatal en Florida</span></div>
       <div><b>USD</b><span>Renta y valorización</span></div>
     </div>
@@ -361,7 +378,7 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
         <div class="body">
           <h3>One Twenty Brickell Signature</h3>
           <div class="loc">Brickell, Miami · por PMG · Entrega verano 2028</div>
-          <div class="specs"><span>467 residencias</span><span>Amuebladas</span><span>Oficina privada incluida</span><span>Sin límite de renta</span></div>
+          <div class="specs"><span>467 residencias</span><span>Amuebladas + oficina</span><span>Pool resort-style</span><span>Wellness Spa</span><span>Sin límite de renta</span></div>
           <div class="price">Desde US$660.000 <small>· estudios a 3 hab.</small></div>
           <div class="entry">Entrada: 10% a la firma · pagos por etapas hasta el cierre.</div>
           <button class="btn btn-wa pcta" data-cta="Hola Martha, quiero información de One Twenty Brickell Signature desde Colombia.">Quiero información</button>
@@ -372,8 +389,8 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
         <div class="body">
           <h3>The Standard Residences Brickell</h3>
           <div class="loc">Brickell, Miami · Two Roads / Newgard · Entrega Q4 2027</div>
-          <div class="specs"><span>422 unidades</span><span>Renta 30 días</span><span>Membresía global 25%</span><span>Obra en marcha</span></div>
-          <div class="price">Desde US$570.000 <small>· estudios a penthouse</small></div>
+          <div class="specs"><span>422 unidades</span><span>Renta 30 días</span><span>Rooftop & lounge</span><span>Membresía Hyatt 25%</span><span>Obra en marcha</span></div>
+          <div class="price">Desde US$610.000 <small>· estudios a penthouse</small></div>
           <div class="entry">Entrada: 20% a la firma · préstamo de construcción asegurado.</div>
           <button class="btn btn-wa pcta" data-cta="Hola Martha, quiero información de The Standard Residences Brickell desde Colombia.">Quiero información</button>
         </div>
@@ -394,12 +411,34 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
         <div class="body">
           <h3>Parkside Residences</h3>
           <div class="loc">Miami · por BI Group · arquitecto Kobi Karp</div>
-          <div class="specs"><span>Desarrollador global</span><span>400+ proyectos</span><span>Diseño premium</span></div>
+          <div class="specs"><span>Estudios a 2 hab.</span><span>Spa & yoga</span><span>Pool</span><span>Frente a The Underline</span></div>
           <div class="price">Consultá disponibilidad <small></small></div>
           <div class="entry">Entrada: 20% a la firma · pagos por etapas hasta el cierre.</div>
           <button class="btn btn-wa pcta" data-cta="Hola Martha, quiero información de Parkside desde Colombia.">Quiero información</button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA REAL -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Imágenes reales de los proyectos</span>
+      <h2>Mirá por dentro lo que vas a tener</h2>
+      <p>Terrazas, amenidades y vistas reales de los desarrollos que Martha asesora. Tocá cualquier imagen para ampliarla.</p>
+    </div>
+    <div class="gal reveal" id="gal">
+      <figure data-f="gal-otw-terraza.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-otw-terraza.jpg" alt="Terraza con vista al skyline — One Twenty Brickell"><figcaption>One Twenty · Terraza con vista</figcaption></figure>
+      <figure data-f="gal-std-lounge.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-std-lounge.jpg" alt="Lounge — The Standard Brickell"><figcaption>The Standard · Lounge social</figcaption></figure>
+      <figure data-f="gal-otw-living.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-otw-living.jpg" alt="Sala con vista — One Twenty"><figcaption>One Twenty · Residencia amueblada</figcaption></figure>
+      <figure data-f="gal-std-rooftop.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-std-rooftop.jpg" alt="Rooftop — The Standard"><figcaption>The Standard · Rooftop</figcaption></figure>
+      <figure data-f="gal-pk-spa.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-pk-spa.jpg" alt="Spa & wellness — Parkside"><figcaption>Parkside · Spa & wellness</figcaption></figure>
+      <figure data-f="gal-otw-gym.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-otw-gym.jpg" alt="Gimnasio — One Twenty"><figcaption>One Twenty · Fitness center</figcaption></figure>
+      <figure data-f="gal-std-aerea.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-std-aerea.jpg" alt="Vista aérea Brickell — The Standard"><figcaption>Brickell · Ubicación premium</figcaption></figure>
+      <figure data-f="gal-otw-cocina.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-otw-cocina.jpg" alt="Cocina — One Twenty"><figcaption>One Twenty · Cocina de diseño</figcaption></figure>
+      <figure data-f="gal-pk-lobby.jpg"><img loading="lazy" src="https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/gal-pk-lobby.jpg" alt="Lobby — Parkside"><figcaption>Parkside · Espacios sociales</figcaption></figure>
     </div>
   </div>
 </section>
@@ -517,6 +556,9 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
   </div>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lb"><button class="lbx" aria-label="Cerrar">&times;</button><button class="lbn lbp" aria-label="Anterior">&#8249;</button><img id="lbImg" src="" alt=""><button class="lbn lbnx" aria-label="Siguiente">&#8250;</button></div>
+
 <!-- WA CAPTURE MODAL -->
 <div id="wa-modal" role="dialog" aria-modal="true">
   <div class="box">
@@ -585,6 +627,20 @@ footer{background:#070d1a;padding:46px 0 30px;border-top:1px solid rgba(199,164,
     }catch(e){}
     window.location.href=dest;
   });
+
+  // ---- Lightbox galería ----
+  var CDN='https://raw.githubusercontent.com/sereneleparfumteam-glitch/martha-colombia-assets/master/';
+  var gal=document.getElementById('gal'), lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg');
+  if(gal){
+    var figs=Array.from(gal.querySelectorAll('figure')), idx=0;
+    function show(i){ idx=(i+figs.length)%figs.length; lbImg.src=CDN+figs[idx].getAttribute('data-f'); }
+    figs.forEach(function(f,i){ f.addEventListener('click',function(){ show(i); lb.classList.add('open'); }); });
+    lb.querySelector('.lbx').addEventListener('click',function(){lb.classList.remove('open');});
+    lb.querySelector('.lbp').addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+    lb.querySelector('.lbnx').addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+    lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('open');});
+    document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open'))return; if(e.key==='Escape')lb.classList.remove('open'); if(e.key==='ArrowLeft')show(idx-1); if(e.key==='ArrowRight')show(idx+1); });
+  }
 
   // ---- Lead form ----
   var form=document.getElementById('leadForm'), ok=document.getElementById('okMsg');
